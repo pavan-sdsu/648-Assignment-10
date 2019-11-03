@@ -7,18 +7,12 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/jquery.mobilemenu.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('#responsive-menu').mobileMenu();
-		});
-	</script>
 </head>
 <body>
 	<main class="container">
@@ -45,5 +39,19 @@
 			<p>Find the latest technical resources including articles, tips, patches, documentation and more and discuss ideas with your peers. These communities are your convenient one-stop shop for vSupport. Still have a question? <a href="mailto:support@vectacorp.com?Subject=I%20need%20help...">Send us an email</a>.</p>
 		</section>
 	</main>
+
+	
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#responsive-menu').mobileMenu();
+		});
+	</script>
+
+	<script>
+		$("#responsive-menu a").tooltip();	
+	</script>
 </body>
 </html>
