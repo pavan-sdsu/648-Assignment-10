@@ -15,8 +15,12 @@
 	-->
 
 	<style>
-		div ul { padding-left: 40px; }
-		div ul li { list-style: initial; }
+		a { cursor: pointer; }
+		#testimonials { background: #c3c3c3; }
+		#testimonials h4 { padding: 1rem 0 0 1rem; }
+		section ul, div ul { padding-left: 40px; }
+		section ul, div ul li { list-style: initial; }
+		#vProspect, #vConvert, #vRetain { padding: 1rem 0rem; }
 	</style>
 	
 </head>
@@ -58,7 +62,7 @@
 					<li>Define expansion plans and strategies.</li>
 					<li>Implement Search Engine Optimization of all Online materials.</li>
 				</ul>
-				<p>Back to top</p>
+				<a id="back2top">Back to top</a>
 			</div>
 			
 			<div id="vConvert">
@@ -72,7 +76,7 @@
 					<li>Develop any applicable back-end programs to facilitate user interaction with the company and offerings on a highly functional level to allow any kind of online transactions and a completely centralized information collection and access point, accessible from any location.</li>
 					<li>Create an architecture to display the site content and information in a logical and easy to access manner. Facilitating thereby the desired ease, for the user to find what they are looking for quickly and easily. Allowing the user to focus on the subject at hand rather than searching for information on the site.</li>
 				</ul>
-				<p>Back to top</p>
+				<a id="back2top">Back to top</a>
 			</div>
 			
 			<div id="vRetain">
@@ -83,7 +87,7 @@
 					<li>Collect crucial information, data and statistics that allow a company to keep in touch with users in a very customized, highly targeted way.</li>
 					<li>Analyze site visitor behavior through traffic analysis, usability studies and interactive polling. Recommending and making site and application adjustments to improve usability and user experience.</li>
 				</ul>
-				<p>Back to top</p>
+				<a id="back2top">Back to top</a>
 			</div>
 		</section>
 		
@@ -102,6 +106,9 @@
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.min.js"></script>
+	<script src="./js/jquery.smooth-scroll.min.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
@@ -110,6 +117,10 @@
 	
 	<script>
 		$("#responsive-menu a").tooltip();	
+		$("#testimonials").stick_in_parent();
+		$("a#back2top").on("click", function() {
+			$.smoothScroll();
+		});
 	</script>
 </body>
 </html>
